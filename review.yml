@@ -1,0 +1,115 @@
+aid: weatherbys-bank
+name: Weatherbys Bank
+review:
+  question: >-
+    Does Weatherbys Bank expose a discoverable public developer portal and a live,
+    confirmable UK Open Banking Open Data endpoint?
+  answer: false
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    Weatherbys Bank is a small, family-owned UK private bank (Weatherbys Banking
+    Group), FCA-authorised and a regulated participant in UK Open Banking (PSD2),
+    but it is NOT one of the CMA9 mandated banks. It publishes no separately
+    branded public developer portal (no developer.weatherbys.bank, no "Bank of
+    APIs"-style catalogue). Its main marketing site (www.weatherbys.bank) contains
+    no developer/API/Open Banking section. Its Open Banking gateway is hosted on
+    Oracle Banking APIs (BaaS): the DNS name openbanking.weatherbysbank.com resolves
+    (CNAME to wthbfubprd-publbaas002.opc.oracleoutsourcing.com), and online banking
+    lives at odbx.weatherbysbank.com (Oracle BaaS, HTTP 200). As an FCA ASPSP the
+    bank is required to expose OBIE-conformant surfaces: PUBLIC unauthenticated Open
+    Data APIs (ATM/branch locators, personal/business current account product data)
+    and the FAPI-secured OBIE Read/Write APIs (AIS/PIS/CBPII). No live Open Data
+    endpoint could be confirmed: the Open Banking host resets the TLS connection
+    (Recv failure / connection reset by peer during the handshake) when contacted
+    without a client certificate, which is consistent with an mTLS-gated edge or
+    WAF. The Open Data and Read/Write APIs are therefore represented as
+    documented/standard and marked UNVERIFIED. Spec provenance is the SHARED OBIE
+    Open Data standard (Swagger 2.0), NOT bank-proprietary contracts.
+  ownership: >-
+    Family-owned (Weatherby family, 7th generation; chairman Roger Weatherby),
+    trading since 1770; Weatherbys Bank Limited incorporated 1994 (Companies House
+    02943300), Weatherbys Bank Holdings Limited 2005 (05659237). Private bank, not a
+    mutual/building society, not CMA9.
+  developerPortal:
+    present: false
+    note: >-
+      No public developer portal or API catalogue found. Open Banking is served via
+      Oracle Banking APIs (BaaS) infrastructure with no public documentation site;
+      the openbanking.org.uk regulated-provider page is the closest public reference.
+  openDataConfirmed: false
+  openDataNote: >-
+    Documented host openbanking.weatherbysbank.com resolves (Oracle BaaS) but resets
+    TLS without a client certificate, so /open-banking/v2.3/atms and related Open
+    Data paths returned no HTTP status (connection code 000). No 200 confirmed.
+  authModel:
+    readWrite: FAPI OAuth2/OIDC + mutual-TLS + PSD2 SCA, OBIE/eIDAS certs, dynamic client registration
+    openData: none (public, unauthenticated by standard)
+  specProvenance: OBIE-standard (shared UK Open Banking Open Data specs), not proprietary
+  transports:
+    - protocol: REST
+      scheme: https
+      baseURL: https://openbanking.weatherbysbank.com/open-banking/v2.3
+      documented: true
+      verified: false
+      note: OBIE Open Data ATM/Branch base (v2.3); host resolves but TLS reset without client cert.
+    - protocol: REST
+      scheme: https
+      baseURL: https://openbanking.weatherbysbank.com/open-banking/v2.4
+      documented: true
+      verified: false
+      note: OBIE Open Data Personal/Business Current Accounts base (v2.4).
+    - protocol: REST
+      scheme: https
+      baseURL: https://openbanking.weatherbysbank.com/open-banking/v3.1
+      documented: true
+      verified: false
+      note: OBIE Read/Write base (aisp/pisp/cbpii); FAPI + mTLS + PSD2 SCA, credentials not fabricated.
+  probes:
+    - url: https://www.weatherbys.bank/.well-known/open-banking
+      status: 404
+    - url: https://openbanking.weatherbysbank.com/open-banking/v2.3/atms
+      status: 000
+      note: TLS handshake reset by peer (no client certificate).
+    - url: https://www.weatherbysbank.com/
+      status: 200
+    - url: https://odbx.weatherbysbank.com/
+      status: 200
+      note: Oracle BaaS online banking login.
+    - url: https://www.openbanking.org.uk/regulated-providers/weatherbys-bank-limited/
+      status: 200
+      note: Confirms Weatherbys Bank Limited as a regulated OB provider.
+  openapiHarvested: true
+  openapiNote: >-
+    Four SHARED OBIE Open Data standard Swagger 2.0 specs harvested verbatim into
+    openapi/ (ATM Locator v2.3, Branch Locator v2.3, Personal Current Accounts v2.4,
+    Business Current Accounts v2.4) from OpenBankingUK/opendata-api-docs-pub. These
+    are the industry standard the bank conforms to, not bank-issued contracts (spec
+    host field is developer.openbanking.org.uk). No bank-proprietary OpenAPI was
+    publicly downloadable. OBIE Read/Write specs are pointed at
+    github.com/OpenBankingUK/read-write-api-specs.
+sources:
+  - url: https://www.weatherbys.bank/
+    type: Website
+    note: Marketing site; no developer/API/Open Banking section.
+  - url: https://www.openbanking.org.uk/regulated-providers/weatherbys-bank-limited/
+    type: Documentation
+    note: Confirms regulated Open Banking participant status.
+  - url: https://www.weatherbys.bank/about-us/our-history/
+    type: Documentation
+    note: Family ownership since 1770.
+  - url: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
+    type: APIReference
+    note: OBIE Open Data standard the bank conforms to; source of harvested specs.
+  - url: https://github.com/OpenBankingUK/read-write-api-specs
+    type: APIReference
+    note: OBIE Read/Write (AIS/PIS/CBPII) standard specs.
+actions:
+  apisYmlUpdated: true
+  reason: >-
+    Represented the OBIE Open Data family (ATM/Branch locators, Personal/Business
+    Current Accounts) as PUBLIC apis[] with harvested shared-standard OpenAPIs, and
+    the OBIE Read/Write family (AIS/PIS/CBPII) as documented authenticated apis[]
+    pointing at the OBIE standard. All endpoints marked unverified; no host, spec,
+    or credential was fabricated.

@@ -1,0 +1,204 @@
+aid: weatherbys-bank
+url: https://raw.githubusercontent.com/api-evangelist/weatherbys-bank/refs/heads/main/apis.yml
+name: Weatherbys Bank
+kind: company
+description: >-
+  Weatherbys Bank is a small, family-owned UK private bank, part of the Weatherbys
+  Banking Group, trading since James Weatherby founded the family business in 1770
+  and incorporated as Weatherbys Bank Limited in 1994. It serves private, business,
+  and racing customers through Weatherbys Private Bank and Weatherbys Racing Bank
+  from offices in London, Wellingborough, and Edinburgh, and is authorised by the
+  Prudential Regulation Authority and regulated by the Financial Conduct Authority
+  (FCA firm reference under Weatherbys Bank Limited). As an FCA-authorised ASPSP it
+  is a regulated participant in UK Open Banking (PSD2), publishing OBIE-conformant
+  surfaces - PUBLIC, unauthenticated Open Data reference APIs (ATM and branch
+  locators, personal and business current account product data) and the FAPI-secured
+  OBIE Read/Write APIs for Account and Transaction Information (AIS), Payment
+  Initiation (PIS), and Confirmation of Funds (CBPII). It is not one of the CMA9
+  mandated banks. Its Open Banking gateway is hosted on Oracle Banking APIs (BaaS)
+  at openbanking.weatherbysbank.com; there is no separately branded public developer
+  portal.
+accessModel:
+  pricing: unknown
+  onboarding: enrollment
+  trial: false
+  try_now: false
+  public: false
+  label: OBIE onboarding (eIDAS/OBIE certificates)
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-23'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Financial Services
+- Banking
+- Open Banking
+- PSD2
+- OBIE
+- United Kingdom
+- Payments
+- Account Information
+- Private Banking
+created: '2026-07-23'
+modified: '2026-07-23'
+specificationVersion: '0.19'
+apis:
+- aid: weatherbys-bank:weatherbys-open-data-atm-locator-api
+  name: Weatherbys Bank Open Data ATM Locator API
+  description: >-
+    PUBLIC, unauthenticated OBIE Open Data ATM Locator API — reference data for the
+    bank's ATMs (postal address, geographic coordinates, services). Conforms to the
+    OBIE Open Data API Standard v2.3. Documented/standard for this ASPSP; the live
+    endpoint on the bank's Open Banking host was not verified (TLS reset without a
+    client certificate).
+  humanURL: https://www.openbanking.org.uk/regulated-providers/weatherbys-bank-limited/
+  baseURL: https://openbanking.weatherbysbank.com/open-banking/v2.3
+  tags:
+  - Open Data
+  - ATM Locator
+  - Public
+  properties:
+  - type: OpenAPI
+    url: openapi/obie-opendata-atm-locator-standard.json
+  - type: Documentation
+    url: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/atmlocator/atm-locator.html
+  - type: APIReference
+    url: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
+- aid: weatherbys-bank:weatherbys-open-data-branch-locator-api
+  name: Weatherbys Bank Open Data Branch Locator API
+  description: >-
+    PUBLIC, unauthenticated OBIE Open Data Branch Locator API — reference data for
+    the bank's branches. Conforms to the OBIE Open Data API Standard v2.3.
+    Documented/standard for this ASPSP; the live endpoint was not verified.
+  humanURL: https://www.openbanking.org.uk/regulated-providers/weatherbys-bank-limited/
+  baseURL: https://openbanking.weatherbysbank.com/open-banking/v2.3
+  tags:
+  - Open Data
+  - Branch Locator
+  - Public
+  properties:
+  - type: OpenAPI
+    url: openapi/obie-opendata-branch-locator-standard.json
+  - type: Documentation
+    url: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/branchlocator/branch-locator.html
+  - type: APIReference
+    url: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
+- aid: weatherbys-bank:weatherbys-open-data-personal-current-accounts-api
+  name: Weatherbys Bank Open Data Personal Current Accounts API
+  description: >-
+    PUBLIC, unauthenticated OBIE Open Data Personal Current Accounts (PCA) API —
+    reference product data (features, fees, rates, eligibility) for personal current
+    accounts. Conforms to the OBIE Open Data API Standard v2.4. Documented/standard
+    for this ASPSP; the live endpoint was not verified.
+  humanURL: https://www.openbanking.org.uk/regulated-providers/weatherbys-bank-limited/
+  baseURL: https://openbanking.weatherbysbank.com/open-banking/v2.4
+  tags:
+  - Open Data
+  - Personal Current Accounts
+  - Public
+  properties:
+  - type: OpenAPI
+    url: openapi/obie-opendata-personal-current-accounts-standard.json
+  - type: Documentation
+    url: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/pca/pca.html
+  - type: APIReference
+    url: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
+- aid: weatherbys-bank:weatherbys-open-data-business-current-accounts-api
+  name: Weatherbys Bank Open Data Business Current Accounts API
+  description: >-
+    PUBLIC, unauthenticated OBIE Open Data Business Current Accounts (BCA) API —
+    reference product data for business current accounts. Conforms to the OBIE Open
+    Data API Standard v2.4. Documented/standard for this ASPSP; the live endpoint
+    was not verified.
+  humanURL: https://www.openbanking.org.uk/regulated-providers/weatherbys-bank-limited/
+  baseURL: https://openbanking.weatherbysbank.com/open-banking/v2.4
+  tags:
+  - Open Data
+  - Business Current Accounts
+  - Public
+  properties:
+  - type: OpenAPI
+    url: openapi/obie-opendata-business-current-accounts-standard.json
+  - type: Documentation
+    url: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/bca/bca.html
+  - type: APIReference
+    url: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/
+- aid: weatherbys-bank:weatherbys-account-transaction-information-api
+  name: Weatherbys Bank Account and Transaction Information API (AIS)
+  description: >-
+    OBIE Read/Write Account and Transaction Information API (AISP). FAPI-secured
+    (OAuth2/OIDC, mutual-TLS, PSD2 strong customer authentication) — requires
+    OBIE/eIDAS certificates and dynamic client registration. Represented as the
+    documented OBIE Read/Write standard for this ASPSP; base path is standard,
+    credentials are not fabricated.
+  humanURL: https://www.openbanking.org.uk/regulated-providers/weatherbys-bank-limited/
+  baseURL: https://openbanking.weatherbysbank.com/open-banking/v3.1/aisp
+  tags:
+  - Read/Write
+  - Account Information
+  - AIS
+  properties:
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: weatherbys-bank:weatherbys-payment-initiation-api
+  name: Weatherbys Bank Payment Initiation API (PIS)
+  description: >-
+    OBIE Read/Write Payment Initiation API (PISP). FAPI-secured (OAuth2/OIDC,
+    mutual-TLS, PSD2 SCA) — requires OBIE/eIDAS certificates and dynamic client
+    registration. Represented as the documented OBIE Read/Write standard for this
+    ASPSP; credentials are not fabricated.
+  humanURL: https://www.openbanking.org.uk/regulated-providers/weatherbys-bank-limited/
+  baseURL: https://openbanking.weatherbysbank.com/open-banking/v3.1/pisp
+  tags:
+  - Read/Write
+  - Payment Initiation
+  - PIS
+  properties:
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: weatherbys-bank:weatherbys-confirmation-of-funds-api
+  name: Weatherbys Bank Confirmation of Funds API (CBPII)
+  description: >-
+    OBIE Read/Write Confirmation of Funds API (CBPII). FAPI-secured (OAuth2/OIDC,
+    mutual-TLS, PSD2 SCA) — requires OBIE/eIDAS certificates and dynamic client
+    registration. Represented as the documented OBIE Read/Write standard for this
+    ASPSP; credentials are not fabricated.
+  humanURL: https://www.openbanking.org.uk/regulated-providers/weatherbys-bank-limited/
+  baseURL: https://openbanking.weatherbysbank.com/open-banking/v3.1/cbpii
+  tags:
+  - Read/Write
+  - Confirmation of Funds
+  - CBPII
+  properties:
+  - type: Documentation
+    url: https://openbankinguk.github.io/read-write-api-site3/
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+common:
+- type: Website
+  url: https://www.weatherbys.bank/
+- type: SignIn
+  url: https://odbx.weatherbysbank.com/
+- type: Documentation
+  url: https://www.openbanking.org.uk/regulated-providers/weatherbys-bank-limited/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/weatherbys-banking-group
+- type: Blog
+  url: https://www.weatherbys.bank/insights/
+- type: StatusPage
+  url: https://www.weatherbys.bank/help-and-support/service-updates/
+- type: Support
+  url: https://www.weatherbys.bank/help-and-support/
+- type: TermsOfService
+  url: https://www.weatherbys.bank/terms-conditions/
+- type: PrivacyPolicy
+  url: https://www.weatherbys.bank/privacy-policy/
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
