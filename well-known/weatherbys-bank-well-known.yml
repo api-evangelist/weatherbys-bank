@@ -1,0 +1,27 @@
+generated: '2026-07-23'
+method: probed
+source: live probes of apis.yml + OpenAPI hosts
+note: >-
+  No /.well-known/ discovery documents were served. The Open Banking host
+  (openbanking.weatherbysbank.com) resets the TLS connection when contacted
+  without a client certificate (mTLS-gated edge), so anonymous discovery is not
+  possible there. The marketing and online-banking hosts return 404 for all
+  probed well-known paths. Absence recorded for auditability.
+hosts:
+- host: https://www.weatherbys.bank
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+- host: https://openbanking.weatherbysbank.com
+  documents:
+  - {path: /.well-known/security.txt, status: tls-reset}
+  - {path: /.well-known/openid-configuration, status: tls-reset}
+  - {path: /.well-known/oauth-authorization-server, status: tls-reset}
+- host: https://odbx.weatherbysbank.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}

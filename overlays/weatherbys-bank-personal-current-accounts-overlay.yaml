@@ -1,0 +1,19 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Weatherbys Bank Open Data Personal Current Accounts API
+  version: 1.0.0
+extends: openapi/obie-opendata-personal-current-accounts-standard.json
+actions:
+- target: $.info
+  update:
+    x-apievangelist-provider: weatherbys-bank
+    x-apievangelist-standard: OBIE Open Data API
+    x-apievangelist-access: public-unauthenticated
+    x-apievangelist-verified: false
+    x-apievangelist-note: >-
+      Shared OBIE Open Data standard contract, not a bank-proprietary spec. Live
+      endpoint on openbanking.weatherbysbank.com was not verified (mTLS-gated edge).
+- target: $.paths['/personal-current-accounts'].get
+  update:
+    x-apievangelist-agent-access: read
+    x-apievangelist-conventions: conventions/weatherbys-bank-conventions.yml

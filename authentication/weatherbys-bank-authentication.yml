@@ -1,0 +1,37 @@
+generated: '2026-07-23'
+method: searched
+source: https://openbankinguk.github.io/read-write-api-site3/ (OBIE Read/Write + Open Data standards)
+docs: https://www.openbanking.org.uk/regulated-providers/weatherbys-bank-limited/
+note: >-
+  Two distinct auth profiles. (1) The Open Data APIs (ATM/Branch locators,
+  personal/business current account product data) are PUBLIC and unauthenticated —
+  no security scheme. (2) The Read/Write APIs (AIS/PIS/CBPII) are FAPI-secured per
+  the OBIE Read/Write standard this ASPSP conforms to as an FCA-authorised
+  participant in UK Open Banking: OAuth2 + OpenID Connect over mutual-TLS, with
+  PSD2 Strong Customer Authentication. Client onboarding requires OBIE/eIDAS
+  (OBWAC/OBSeal) certificates and OpenID dynamic client registration. Credentials
+  are provider-issued and are not fabricated here.
+summary:
+  types: [none, oauth2, openIdConnect, mutualTLS]
+  open_data_auth: none
+  read_write_auth: [oauth2, openIdConnect, mutualTLS]
+  oauth2_flows: [authorizationCode, clientCredentials]
+  client_auth_methods: [tls_client_auth, private_key_jwt]
+schemes:
+- name: open-data-public
+  type: none
+  applies_to: [ATM Locator, Branch Locator, Personal Current Accounts, Business Current Accounts]
+- name: fapi-oauth2
+  type: oauth2
+  flows: [authorizationCode, clientCredentials]
+  transport: mutual-TLS (FAPI 1.0 Advanced)
+  applies_to: [AIS, PIS, CBPII]
+  scopes_ref: scopes/weatherbys-bank-scopes.yml
+- name: fapi-oidc
+  type: openIdConnect
+  detail: OpenID Connect hybrid flow with request object (JWT), PSD2 SCA
+  applies_to: [AIS, PIS, CBPII]
+- name: mutual-tls
+  type: mutualTLS
+  detail: OBIE/eIDAS transport (OBWAC) + signing (OBSeal) certificates
+  applies_to: [AIS, PIS, CBPII]

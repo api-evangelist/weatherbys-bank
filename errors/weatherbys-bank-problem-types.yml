@@ -1,0 +1,34 @@
+generated: '2026-07-23'
+method: derived
+source: openapi/obie-opendata-*-standard.json (Open Data API standard error responses)
+format: obie-opendata
+note: >-
+  Derived from the shared OBIE Open Data API standard responses declared on every
+  Open Data operation (/atms, /branches, /personal-current-accounts,
+  /business-current-accounts). The Open Data standard returns errors as an OBError
+  object (application/prs.openbanking.opendata.v{n}+json). The FAPI-secured
+  Read/Write APIs (AIS/PIS/CBPII) return the OBIE Read/Write OBErrorResponse1
+  envelope (RFC-style error codes such as UK.OBIE.Field.Invalid,
+  UK.OBIE.Resource.NotFound, UK.OBIE.Unsupported.*); those are documented in the
+  OBIE Read/Write standard and are not reproduced verbatim here.
+problems:
+- status: 400
+  title: Bad request
+  description: A request was sent which could not be understood.
+  applies_to: [ATM Locator, Branch Locator, Personal Current Accounts, Business Current Accounts]
+- status: 408
+  title: Request timeout
+  description: The client failed to submit a request and a timeout occurred.
+  applies_to: [ATM Locator, Branch Locator, Personal Current Accounts, Business Current Accounts]
+- status: 429
+  title: Too many requests
+  description: The resource was requested too often; the client is being rate limited.
+  applies_to: [ATM Locator, Branch Locator, Personal Current Accounts, Business Current Accounts]
+- status: 500
+  title: Internal server error
+  description: An error occurred on the server; no further information is available.
+  applies_to: [ATM Locator, Branch Locator, Personal Current Accounts, Business Current Accounts]
+- status: 503
+  title: Service unavailable
+  description: The service is temporarily unavailable.
+  applies_to: [ATM Locator, Branch Locator, Personal Current Accounts, Business Current Accounts]

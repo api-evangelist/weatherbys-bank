@@ -1,0 +1,30 @@
+# Weatherbys Bank
+
+> Weatherbys Bank is a small, family-owned UK private bank (Weatherbys Banking Group), trading since 1770 and incorporated as Weatherbys Bank Limited in 1994. It is FCA-authorised and a regulated ASPSP participant in UK Open Banking (PSD2), publishing OBIE-conformant surfaces: PUBLIC unauthenticated Open Data APIs (ATM/branch locators, personal/business current account product data) and the FAPI-secured OBIE Read/Write APIs (AIS, PIS, CBPII). It is not one of the CMA9 mandated banks and has no separately branded public developer portal. Its Open Banking gateway is hosted on Oracle Banking APIs at openbanking.weatherbysbank.com.
+
+## Public Open Data APIs (unauthenticated)
+- [ATM Locator API (OBIE Open Data v2.3)](openapi/obie-opendata-atm-locator-standard.json): ATM locations and services.
+- [Branch Locator API (OBIE Open Data v2.3)](openapi/obie-opendata-branch-locator-standard.json): branch reference data.
+- [Personal Current Accounts API (OBIE Open Data v2.4)](openapi/obie-opendata-personal-current-accounts-standard.json): personal current account product data.
+- [Business Current Accounts API (OBIE Open Data v2.4)](openapi/obie-opendata-business-current-accounts-standard.json): business current account product data.
+
+## FAPI-secured Read/Write APIs (OBIE v3.1, mTLS + OAuth2/OIDC + SCA)
+- [Account & Transaction Information (AIS)](https://openbankinguk.github.io/read-write-api-site3/): account, balance and transaction data. Base: https://openbanking.weatherbysbank.com/open-banking/v3.1/aisp
+- [Payment Initiation (PIS)](https://openbankinguk.github.io/read-write-api-site3/): domestic/international payment initiation. Base: https://openbanking.weatherbysbank.com/open-banking/v3.1/pisp
+- [Confirmation of Funds (CBPII)](https://openbankinguk.github.io/read-write-api-site3/): funds availability confirmation. Base: https://openbanking.weatherbysbank.com/open-banking/v3.1/cbpii
+
+## Artifacts
+- [Authentication profile](authentication/weatherbys-bank-authentication.yml): public Open Data vs FAPI Read/Write.
+- [OAuth scopes](scopes/weatherbys-bank-scopes.yml): openid, accounts, payments, fundsconfirmations.
+- [Conventions](conventions/weatherbys-bank-conventions.yml): idempotency (x-idempotency-key), FAPI tracing, pagination.
+- [Conformance](conformance/weatherbys-bank-conformance.yml): OBIE Open Data / Read/Write, PSD2, FAPI 1.0 Advanced.
+- [Error catalog](errors/weatherbys-bank-problem-types.yml): Open Data standard error responses.
+- [Lifecycle](lifecycle/weatherbys-bank-lifecycle.yml): OBIE-governed uri-path versioning.
+- [Domain security](security/weatherbys-bank-domain-security.yml): TLS/HSTS/DNSSEC/SPF/DMARC probe.
+- [Agentic access](agentic-access/weatherbys-bank-agentic-access.yml): recommended x-agentic-access contracts.
+
+## Docs
+- [OBIE regulated-provider page](https://www.openbanking.org.uk/regulated-providers/weatherbys-bank-limited/)
+- [OBIE Open Data API docs](https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/)
+- [OBIE Read/Write API docs](https://openbankinguk.github.io/read-write-api-site3/)
+- [Bank website](https://www.weatherbys.bank/)

@@ -1,0 +1,24 @@
+generated: '2026-07-23'
+method: searched
+source: >-
+  OBIE Open Data + Read/Write standards; https://www.weatherbys.bank/help-and-support/service-updates/
+note: >-
+  Weatherbys Bank versions its Open Banking surfaces via the OBIE standard version
+  in the URI path. Open Data is served at v2.3 (ATM/Branch locators) and v2.4
+  (personal/business current accounts); the Read/Write APIs follow OBIE v3.1
+  (aisp/pisp/cbpii). Version lifecycle and deprecation cadence are governed
+  centrally by Open Banking Ltd (the OBIE standard), not by a bank-published API
+  deprecation policy. No bank-specific API deprecation policy or SLA page was found.
+versioning:
+  scheme: uri-path
+  open_data_current: [v2.3, v2.4]
+  read_write_current: v3.1
+  governed_by: Open Banking Ltd (OBIE standard version)
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+  note: Deprecation governed by the OBIE standard release lifecycle, not a bank policy.
+status_page: https://www.weatherbys.bank/help-and-support/service-updates/
+sla:
+  url: null
+  note: No standalone API SLA/uptime page published.

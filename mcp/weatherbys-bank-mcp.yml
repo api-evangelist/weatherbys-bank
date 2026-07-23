@@ -1,0 +1,27 @@
+generated: '2026-07-23'
+method: derived
+status: candidate
+source: openapi/obie-opendata-*-standard.json
+note: >-
+  No official hosted/remote MCP server was found for Weatherbys Bank. This is a
+  DERIVED candidate tool surface over the PUBLIC, unauthenticated Open Data APIs
+  only (safe read-only reference data). The FAPI-secured Read/Write APIs are not
+  exposed as candidate tools because they require per-user SCA-authorised consent
+  and OBIE/eIDAS certificates. Not published; do not treat as a live server.
+server:
+  name: weatherbys-bank-open-data
+  transport: http
+  url: null
+tools:
+- name: list_atms
+  description: List Weatherbys Bank ATMs with location and services (Open Data v2.3).
+  source_operation: openapi/obie-opendata-atm-locator-standard.json#get:/atms
+- name: list_branches
+  description: List Weatherbys Bank branches (Open Data v2.3).
+  source_operation: openapi/obie-opendata-branch-locator-standard.json#get:/branches
+- name: list_personal_current_accounts
+  description: List personal current account products, features, fees and rates (Open Data v2.4).
+  source_operation: openapi/obie-opendata-personal-current-accounts-standard.json#get:/personal-current-accounts
+- name: list_business_current_accounts
+  description: List business current account products, features, fees and rates (Open Data v2.4).
+  source_operation: openapi/obie-opendata-business-current-accounts-standard.json#get:/business-current-accounts

@@ -1,0 +1,42 @@
+generated: '2026-07-23'
+method: searched
+source: >-
+  https://www.openbanking.org.uk/regulated-providers/weatherbys-bank-limited/ ;
+  OBIE Open Data + Read/Write standards; FCA Financial Services Register
+note: >-
+  Weatherbys Bank Limited is authorised by the Prudential Regulation Authority and
+  regulated by the Financial Conduct Authority, and is a regulated ASPSP
+  participant in UK Open Banking (PSD2). Its surfaces conform to the OBIE Open Data
+  and Read/Write API standards. Standards asserted below are derived from the OBIE
+  standard the ASPSP implements and from its regulatory status; live FAPI
+  conformance certification could not be independently verified (endpoint is
+  mTLS-gated).
+standards:
+- id: obie-open-data-2.3
+  conforms: true
+  evidence: ATM and Branch Locator Open Data APIs served at v2.3.
+- id: obie-open-data-2.4
+  conforms: true
+  evidence: Personal and Business Current Account Open Data APIs served at v2.4.
+- id: obie-read-write-3.1
+  conforms: true
+  evidence: AIS/PIS/CBPII documented against the OBIE Read/Write standard v3.1.
+- id: psd2
+  conforms: true
+  evidence: FCA-authorised ASPSP; PSD2 Strong Customer Authentication on Read/Write APIs.
+- id: fapi-1.0-advanced
+  conforms: true
+  evidence: OBIE Read/Write security profile (OAuth2/OIDC over mutual-TLS, request objects).
+- id: oauth2
+  conforms: true
+  evidence: authorizationCode + clientCredentials flows on Read/Write APIs.
+- id: oidc
+  conforms: true
+  evidence: OpenID Connect hybrid flow with SCA for consent authorisation.
+- id: mutual-tls
+  conforms: true
+  evidence: OBIE/eIDAS OBWAC/OBSeal certificates required for Read/Write access.
+compliance_program:
+  regulator: Financial Conduct Authority (FCA) + Prudential Regulation Authority (PRA)
+  status: Authorised UK bank / ASPSP
+  reference: https://www.openbanking.org.uk/regulated-providers/weatherbys-bank-limited/

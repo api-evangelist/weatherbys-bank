@@ -181,6 +181,42 @@ apis:
   - type: APIReference
     url: https://github.com/OpenBankingUK/read-write-api-specs
 common:
+- type: AgenticAccess
+  url: agentic-access/weatherbys-bank-agentic-access.yml
+- type: DomainSecurity
+  url: security/weatherbys-bank-domain-security.yml
+- type: Authentication
+  url: authentication/weatherbys-bank-authentication.yml
+- type: OAuthScopes
+  url: scopes/weatherbys-bank-scopes.yml
+- type: Conventions
+  url: conventions/weatherbys-bank-conventions.yml
+- type: Idempotency
+  url: conventions/weatherbys-bank-conventions.yml
+- type: Conformance
+  url: conformance/weatherbys-bank-conformance.yml
+- type: Compliance
+  url: https://www.openbanking.org.uk/regulated-providers/weatherbys-bank-limited/
+- type: ErrorCatalog
+  url: errors/weatherbys-bank-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/weatherbys-bank-lifecycle.yml
+- type: MCPServer
+  url: mcp/weatherbys-bank-mcp.yml
+- type: LLMsTxt
+  url: llms/weatherbys-bank-llms.txt
+- type: Overlay
+  name: Open Data ATM Locator overlay
+  url: overlays/weatherbys-bank-atm-locator-overlay.yaml
+- type: Overlay
+  name: Open Data Branch Locator overlay
+  url: overlays/weatherbys-bank-branch-locator-overlay.yaml
+- type: Overlay
+  name: Open Data Personal Current Accounts overlay
+  url: overlays/weatherbys-bank-personal-current-accounts-overlay.yaml
+- type: Overlay
+  name: Open Data Business Current Accounts overlay
+  url: overlays/weatherbys-bank-business-current-accounts-overlay.yaml
 - type: Website
   url: https://www.weatherbys.bank/
 - type: SignIn

@@ -1,0 +1,38 @@
+generated: '2026-07-23'
+method: searched
+source: https://openbankinguk.github.io/read-write-api-site3/ (OBIE Read/Write API standard)
+note: >-
+  Cross-cutting request/response semantics for the FAPI-secured Read/Write APIs
+  (AIS/PIS/CBPII) as mandated by the OBIE Read/Write standard this ASPSP conforms
+  to. The public Open Data APIs use content negotiation via versioned media types
+  (application/prs.openbanking.opendata.v{n}+json) and expose no idempotency,
+  consent, or SCA semantics.
+authentication:
+  style: FAPI 1.0 Advanced — OAuth2/OIDC over mutual-TLS
+  ref: authentication/weatherbys-bank-authentication.yml
+idempotency:
+  supported: true
+  header: x-idempotency-key
+  scope: Payment Initiation POST operations (domestic/international payments and file payments)
+  max_length: 40
+  retention: >-
+    Idempotency key uniqueness is enforced for a 24-hour window per the OBIE
+    Read/Write standard; a replayed key with an identical request returns the
+    original resource without creating a duplicate.
+tracing:
+  request_id_header: x-fapi-interaction-id
+  additional_headers: [x-fapi-auth-date, x-fapi-customer-ip-address, x-customer-user-agent]
+pagination:
+  style: cursor/link
+  response_fields: [Links.Self, Links.First, Links.Prev, Links.Next, Links.Last, Meta.TotalPages]
+versioning:
+  style: uri-path (OBIE standard version, e.g. /v3.1)
+  ref: lifecycle/weatherbys-bank-lifecycle.yml
+error_envelope:
+  read_write: OBErrorResponse1 (Code, Id, Message, Errors[].ErrorCode/Message/Path/Url)
+  open_data: OBError (application/prs.openbanking.opendata.v{n}+json)
+  ref: errors/weatherbys-bank-problem-types.yml
+rate_limiting:
+  signalled_via: HTTP 429 (Too Many Requests); no documented bank-specific rate headers.
+consent:
+  model: OBIE consent resource (account-access-consents / payment consents / funds-confirmation-consents) authorised via SCA before data/payment operations.

@@ -1,0 +1,25 @@
+generated: '2026-07-23'
+method: searched
+source: https://openbankinguk.github.io/read-write-api-site3/ (OBIE Read/Write API standard)
+docs: https://openbankinguk.github.io/read-write-api-site3/v3.1.11/profiles/read-write-data-api-profile.html
+note: >-
+  The OBIE Read/Write standard this ASPSP conforms to defines a fixed set of OAuth2
+  scopes for the AIS/PIS/CBPII surfaces. The Open Data APIs are public and have no
+  scopes. Scopes are standardised by Open Banking Ltd, not bank-proprietary.
+schemes:
+- name: fapi-oauth2
+  applies_to: [AIS, PIS, CBPII]
+  flows: [authorizationCode, clientCredentials]
+scopes:
+- scope: openid
+  description: Required OpenID Connect scope for all Read/Write authorization flows.
+  apis: [AIS, PIS, CBPII]
+- scope: accounts
+  description: Account and Transaction Information (AIS) — access to account, balance, transaction and related data.
+  apis: [AIS]
+- scope: payments
+  description: Payment Initiation (PIS) — create and manage domestic/international payment consents and payments.
+  apis: [PIS]
+- scope: fundsconfirmations
+  description: Confirmation of Funds (CBPII) — confirm availability of funds against a consented account.
+  apis: [CBPII]
