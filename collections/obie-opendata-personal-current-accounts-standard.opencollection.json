@@ -1,0 +1,60 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Open Data API",
+    "version": "v2.4"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "PCA",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /personal-current-accounts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/personal-current-accounts",
+            "headers": [
+              {
+                "name": "If-Modified-Since",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Gets a list of all `Personal Current Account` objects."
+        },
+        {
+          "info": {
+            "name": "HEAD /personal-current-accounts",
+            "type": "http"
+          },
+          "http": {
+            "method": "HEAD",
+            "url": "{{baseUrl}}/personal-current-accounts",
+            "headers": [
+              {
+                "name": "If-Modified-Since",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Gets header information on the current set of `Personal Current Account` data"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

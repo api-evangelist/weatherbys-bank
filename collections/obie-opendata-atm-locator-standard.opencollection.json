@@ -1,0 +1,60 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Open Data API",
+    "version": "v2.3"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "ATM",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /atms",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/atms",
+            "headers": [
+              {
+                "name": "If-Modified-Since",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Gets a list of all `ATM` objects."
+        },
+        {
+          "info": {
+            "name": "HEAD /atms",
+            "type": "http"
+          },
+          "http": {
+            "method": "HEAD",
+            "url": "{{baseUrl}}/atms",
+            "headers": [
+              {
+                "name": "If-Modified-Since",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Gets header information on the current set of `ATM` data"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

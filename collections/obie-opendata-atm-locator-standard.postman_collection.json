@@ -1,0 +1,640 @@
+{
+  "item": [
+    {
+      "id": "6e956829-221f-4f86-b801-b9bbf7c6deb3",
+      "name": "ATM",
+      "description": {
+        "content": "Endpoint for getting ATM data",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5a2dd7dd-a8d3-457f-90a1-c05d1f1ed564",
+          "name": "Gets a list of all `ATM` objects.",
+          "request": {
+            "name": "Gets a list of all `ATM` objects.",
+            "description": {
+              "content": "Gets a list of all `ATM` objects.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "atms"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                "key": "If-Modified-Since",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/prs.openbanking.opendata.v2.3+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "619d722f-48dd-41d9-adb3-2a0cdc900aa6",
+              "name": "Successful response with a list of `ATM` data",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "atms"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                    "key": "If-Modified-Since",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                    "key": "If-None-Match",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/prs.openbanking.opendata.v2.3+json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "HTTPS strict transport security header",
+                  "key": "Strict-Transport-Security",
+                  "value": "max-age=31536000"
+                },
+                {
+                  "disabled": false,
+                  "description": "A unique ID identifying whether this resource has changed",
+                  "key": "Etag",
+                  "value": "string"
+                },
+                {
+                  "disabled": false,
+                  "description": "Describes how long this response can be cached",
+                  "key": "Cache-Control",
+                  "value": "max-age=28800"
+                },
+                {
+                  "disabled": false,
+                  "description": "Prevent this request from being loaded in any iframes",
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "disabled": false,
+                  "description": "Ensures each page has a content type and prevents browsers from doing MIME type sniffing",
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/prs.openbanking.opendata.v2.3+json"
+                }
+              ],
+              "body": "{\n  \"meta\": {\n    \"LastUpdated\": \"1951-10-21T11:02:52.826Z\",\n    \"TotalResults\": 3606,\n    \"Agreement\": \"Use of the APIs and any related data will be subject to the terms of the Open Licence and subject to terms and conditions\",\n    \"License\": \"https://www.openbanking.org.uk/open-licence\",\n    \"TermsOfUse\": \"https://www.openbanking.org.uk/terms\"\n  },\n  \"data\": [\n    {\n      \"Brand\": [\n        {\n          \"BrandName\": \"string\",\n          \"ATM\": [\n            {\n              \"Identification\": \"string\",\n              \"SupportedCurrencies\": [\n                \"WUE\"\n              ],\n              \"Location\": {\n                \"PostalAddress\": {\n                  \"AddressLine\": [\n                    {\n                      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                    },\n                    {\n                      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                    },\n                    {\n                      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                    },\n                    {\n                      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                    },\n                    {\n                      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                    },\n                    {\n                      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                    },\n                    {\n                      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                    }\n                  ],\n                  \"BuildingNumber\": \"string\",\n                  \"StreetName\": \"string\",\n                  \"TownName\": \"string\",\n                  \"CountrySubDivision\": [\n                    {\n                      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                    },\n                    {\n                      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                    }\n                  ],\n                  \"Country\": \"RB\",\n                  \"PostCode\": \"string\",\n                  \"GeoLocation\": {\n                    \"GeographicCoordinates\": {\n                      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                    }\n                  }\n                },\n                \"LocationCategory\": [\n                  \"RemoteUnit\",\n                  \"BranchExternal\"\n                ],\n                \"OtherLocationCategory\": [\n                  {\n                    \"Name\": {\n                      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                    },\n                    \"Description\": {\n                      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                    },\n                    \"Code\": {\n                      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                    }\n                  },\n                  {\n                    \"Name\": {\n                      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                    },\n                    \"Description\": {\n                      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                    },\n                    \"Code\": {\n                      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                    }\n                  }\n                ],\n                \"Site\": {\n                  \"Identification\": \"st\",\n                  \"Name\": \"string\"\n                }\n              },\n              \"SupportedLanguages\": [\n                \"nm\",\n                \"lj\"\n              ],\n              \"ATMServices\": [\n                \"EnvelopeDeposit\",\n                \"MiniStatement\"\n              ],\n              \"Accessibility\": [\n                \"WheelchairAccess\",\n                \"LowerLevelCounter\"\n              ],\n              \"Access24HoursIndicator\": false,\n              \"MinimumPossibleAmount\": \"3601029.\",\n              \"Note\": [\n                \"string\",\n                \"string\"\n              ],\n              \"OtherAccessibility\": [\n                {\n                  \"Name\": \"string\",\n                  \"Description\": \"string\",\n                  \"Code\": \"8gYW\"\n                },\n                {\n                  \"Name\": \"string\",\n                  \"Description\": \"string\",\n                  \"Code\": \"_\"\n                }\n              ],\n              \"OtherATMServices\": [\n                {\n                  \"Name\": \"string\",\n                  \"Description\": \"string\",\n                  \"Code\": \"R\"\n                },\n                {\n                  \"Name\": \"string\",\n                  \"Description\": \"string\",\n                  \"Code\": \"M7DI\"\n                }\n              ],\n              \"Branch\": {\n                \"Identification\": \"string\"\n              }\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"Brand\": [\n        {\n          \"BrandName\": \"string\",\n          \"ATM\": [\n            {\n              \"Identification\": \"string\",\n              \"SupportedCurrencies\": [\n                \"WEB\"\n              ],\n              \"Location\": {\n                \"PostalAddress\": {\n                  \"AddressLine\": [\n                    {\n                      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                    },\n                    {\n                      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                    },\n                    {\n                      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                    },\n                    {\n                      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                    },\n                    {\n                      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                    },\n                    {\n                      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                    },\n                    {\n                      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                    }\n                  ],\n                  \"BuildingNumber\": \"string\",\n                  \"StreetName\": \"string\",\n                  \"TownName\": \"string\",\n                  \"CountrySubDivision\": [\n                    {\n                      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                    },\n                    {\n                      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                    }\n                  ],\n                  \"Country\": \"SN\",\n                  \"PostCode\": \"strin\",\n                  \"GeoLocation\": {\n                    \"GeographicCoordinates\": {\n                      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                    }\n                  }\n                },\n                \"LocationCategory\": [\n                  \"BranchInternal\",\n                  \"RemoteUnit\"\n                ],\n                \"OtherLocationCategory\": [\n                  {\n                    \"Name\": {\n                      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                    },\n                    \"Description\": {\n                      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                    },\n                    \"Code\": {\n                      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                    }\n                  },\n                  {\n                    \"Name\": {\n                      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                    },\n                    \"Description\": {\n                      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                    },\n                    \"Code\": {\n                      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n                    }\n                  }\n                ],\n                \"Site\": {\n                  \"Identification\": \"string\",\n                  \"Name\": \"string\"\n                }\n              },\n              \"SupportedLanguages\": [\n                \"nz\",\n                \"cu\"\n              ],\n              \"ATMServices\": [\n                \"PINUnblock\",\n                \"ChequeDeposits\"\n              ],\n              \"Accessibility\": [\n                \"LowerLevelCounter\",\n                \"LevelAccess\"\n              ],\n              \"Access24HoursIndicator\": true,\n              \"MinimumPossibleAmount\": \"-4835706073.\",\n              \"Note\": [\n                \"string\",\n                \"string\"\n              ],\n              \"OtherAccessibility\": [\n                {\n                  \"Name\": \"string\",\n                  \"Description\": \"string\",\n                  \"Code\": \"l\"\n                },\n                {\n                  \"Name\": \"string\",\n                  \"Description\": \"string\",\n                  \"Code\": \"Am\"\n                }\n              ],\n              \"OtherATMServices\": [\n                {\n                  \"Name\": \"string\",\n                  \"Description\": \"string\",\n                  \"Code\": \"i\"\n                },\n                {\n                  \"Name\": \"string\",\n                  \"Description\": \"string\",\n                  \"Code\": \"\"\n                }\n              ],\n              \"Branch\": {\n                \"Identification\": \"string\"\n              }\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c4504903-effe-4e10-aa50-3b33db12bf94",
+              "name": "You have sent a request which could not be understood.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "atms"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                    "key": "If-Modified-Since",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                    "key": "If-None-Match",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/prs.openbanking.opendata.v2.3+json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "HTTPS strict transport security header",
+                  "key": "Strict-Transport-Security",
+                  "value": "string"
+                },
+                {
+                  "disabled": false,
+                  "description": "Prevent this request from being loaded in any iframes",
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "disabled": false,
+                  "description": "Ensures each page has a content type and prevents browsers from doing MIME type sniffing",
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/prs.openbanking.opendata.v2.3+json"
+                }
+              ],
+              "body": "{\n  \"status\": \"400\",\n  \"title\": \"Bad request\",\n  \"description\": \"You have sent a request which could not be understood.\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2b34b540-5694-48ea-a467-a878a1fa5336",
+              "name": "Your client has failed to submit a request, and a timeout has occurred.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "atms"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                    "key": "If-Modified-Since",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                    "key": "If-None-Match",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/prs.openbanking.opendata.v2.3+json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Request Timeout",
+              "code": 408,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "HTTPS strict transport security header",
+                  "key": "Strict-Transport-Security",
+                  "value": "string"
+                },
+                {
+                  "disabled": false,
+                  "description": "Prevent this request from being loaded in any iframes",
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "disabled": false,
+                  "description": "Ensures each page has a content type and prevents browsers from doing MIME type sniffing",
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/prs.openbanking.opendata.v2.3+json"
+                }
+              ],
+              "body": "{\n  \"status\": \"408\",\n  \"title\": \"Client timeout\",\n  \"description\": \"Your client has failed to submit a request, and a timeout has occurred.\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "153dad30-9ebf-4394-ac29-a03c055cf002",
+              "name": "You have requested this resource too often. Slow down.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "atms"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                    "key": "If-Modified-Since",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                    "key": "If-None-Match",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/prs.openbanking.opendata.v2.3+json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "HTTPS strict transport security header",
+                  "key": "Strict-Transport-Security",
+                  "value": "string"
+                },
+                {
+                  "disabled": false,
+                  "description": "Prevent this request from being loaded in any iframes",
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "disabled": false,
+                  "description": "Ensures each page has a content type and prevents browsers from doing MIME type sniffing",
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/prs.openbanking.opendata.v2.3+json"
+                }
+              ],
+              "body": "{\n  \"status\": \"429\",\n  \"title\": \"Too many requests\",\n  \"description\": \"You have requested this resource too often. Slow down.\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "0b3e5dc9-7c34-4817-a798-d916dfe4943f",
+              "name": "An error occurred on the server. No further information is available.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "atms"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                    "key": "If-Modified-Since",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                    "key": "If-None-Match",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/prs.openbanking.opendata.v2.3+json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "HTTPS strict transport security header",
+                  "key": "Strict-Transport-Security",
+                  "value": "string"
+                },
+                {
+                  "disabled": false,
+                  "description": "Prevent this request from being loaded in any iframes",
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "disabled": false,
+                  "description": "Ensures each page has a content type and prevents browsers from doing MIME type sniffing",
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/prs.openbanking.opendata.v2.3+json"
+                }
+              ],
+              "body": "{\n  \"status\": \"500\",\n  \"title\": \"Internal server error\",\n  \"description\": \"An error occurred on the server. No further information is available.\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2e1fedee-266f-4542-b1a0-c601d70876c5",
+              "name": "The service is temporarily unavailable.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "atms"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                    "key": "If-Modified-Since",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                    "key": "If-None-Match",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/prs.openbanking.opendata.v2.3+json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Service Unavailable",
+              "code": 503,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "HTTPS strict transport security header",
+                  "key": "Strict-Transport-Security",
+                  "value": "string"
+                },
+                {
+                  "disabled": false,
+                  "description": "Prevent this request from being loaded in any iframes",
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "disabled": false,
+                  "description": "Ensures each page has a content type and prevents browsers from doing MIME type sniffing",
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/prs.openbanking.opendata.v2.3+json"
+                }
+              ],
+              "body": "{\n  \"status\": \"503\",\n  \"title\": \"Service temporarily unavailable\",\n  \"description\": \"The service is temporarily unavailable.\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "bf2d7998-bc33-4c63-bd1e-e9d137b7f788",
+              "name": "A standard error response.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "atms"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                    "key": "If-Modified-Since",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                    "key": "If-None-Match",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/prs.openbanking.opendata.v2.3+json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "disabled": false,
+                  "description": "HTTPS strict transport security header",
+                  "key": "Strict-Transport-Security",
+                  "value": "string"
+                },
+                {
+                  "disabled": false,
+                  "description": "Prevent this request from being loaded in any iframes",
+                  "key": "X-Frame-Options",
+                  "value": "DENY"
+                },
+                {
+                  "disabled": false,
+                  "description": "Ensures each page has a content type and prevents browsers from doing MIME type sniffing",
+                  "key": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/prs.openbanking.opendata.v2.3+json"
+                }
+              ],
+              "body": "{\n  \"status\": \"string\",\n  \"title\": \"string\",\n  \"description\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0605afe6-eb8d-4ab0-8c94-3b7117376c9e",
+          "name": "Gets header information on the current set of `ATM` data",
+          "request": {
+            "name": "Gets header information on the current set of `ATM` data",
+            "description": {
+              "content": "Gets header information on the current set of `ATM` data",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "atms"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                "key": "If-Modified-Since",
+                "value": "<string>"
+              },
+              {
+                "disabled": false,
+                "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                "key": "If-None-Match",
+                "value": "<string>"
+              },
+              {
+                "key": "Accept",
+                "value": "application/prs.openbanking.opendata.v2.3+json"
+              }
+            ],
+            "method": "HEAD",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1b19586c-2847-4809-9efa-ca3f6efe268a",
+              "name": "No response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "atms"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if modified since a given date",
+                    "key": "If-Modified-Since",
+                    "value": "<string>"
+                  },
+                  {
+                    "disabled": false,
+                    "description": "Used for conditional request, to retrieve data only if the given Etag value does not match",
+                    "key": "If-None-Match",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/prs.openbanking.opendata.v2.3+json"
+                  }
+                ],
+                "method": "HEAD",
+                "body": {}
+              },
+              "status": "Internal Server Error",
+              "code": 500,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/prs.openbanking.opendata.v2.3+json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://developer.openbanking.org.uk/open-banking/v2.3",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "a268f834-5fff-404e-80f1-3422d00896ea",
+    "name": "Open Data API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Latest Swagger specification for OpenData ATM Locator",
+      "type": "text/plain"
+    }
+  }
+}
