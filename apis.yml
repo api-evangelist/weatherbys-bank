@@ -204,6 +204,9 @@ apis:
   - type: Documentation
     url: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/bca/bca.html
 common:
+- type: CapabilityMap
+  url: capabilities/weatherbys-bank-capability-edges.yml
+  name: Weatherbys Bank Business Capability Map
 - type: AgenticAccess
   url: agentic-access/weatherbys-bank-agentic-access.yml
 - type: DomainSecurity

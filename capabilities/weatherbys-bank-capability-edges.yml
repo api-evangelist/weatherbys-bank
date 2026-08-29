@@ -1,0 +1,33 @@
+slug: weatherbys-bank
+provider: Weatherbys Bank
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Banking & Capital Markets
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 2
+edges:
+- tag: ATM
+  spec_file: weatherbys-bank-atm-api-openapi.yml
+  capability_id: BC-1300.50
+  capability_id_l1: BC-1300
+  capability_name: Banking Channels Management
+  confidence: 0.85
+  evidence: '"Latest Swagger specification for OpenData ATM Locator"; GET /atms'
+  reason: Open Banking Open Data ATM locator publishes the bank's ATM estate and locations — operation
+    of physical self-service banking channels, i.e. Banking Channels Management.
+- tag: Branch
+  spec_file: weatherbys-bank-branch-api-openapi.yml
+  capability_id: BC-1300.50
+  capability_id_l1: BC-1300
+  capability_name: Banking Channels Management
+  confidence: 0.85
+  evidence: '"Latest Swagger specification for OpenData Branch Locator"; GET /branches'
+  reason: Branch locator open data exposes the branch network — branch channel information, mapping to
+    Banking Channels Management.
