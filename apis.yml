@@ -96,6 +96,10 @@ apis:
   tags:
   - Read/Write
   - Payment Initiation
+  - PI
+  tags_raw:
+  - Read/Write
+  - Payment Initiation
   - PIS
   properties:
   - type: Documentation
