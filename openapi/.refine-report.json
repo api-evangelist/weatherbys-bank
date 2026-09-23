@@ -1,0 +1,32 @@
+{
+  "provider": "weatherbys-bank",
+  "sources": [
+    "_original/obie-opendata-atm-locator-standard.json",
+    "_original/obie-opendata-branch-locator-standard.json",
+    "_original/obie-opendata-business-current-accounts-standard.json",
+    "_original/obie-opendata-personal-current-accounts-standard.json"
+  ],
+  "outputs": [
+    "weatherbys-bank-atm-api-openapi.yml",
+    "weatherbys-bank-branch-api-openapi.yml",
+    "weatherbys-bank-bca-api-openapi.yml",
+    "weatherbys-bank-pca-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (4 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "obie-opendata-atm-locator-standard.json: upgraded swagger 2.0 -> OpenAPI 3.2.0",
+    "obie-opendata-branch-locator-standard.json: upgraded swagger 2.0 -> OpenAPI 3.2.0",
+    "obie-opendata-business-current-accounts-standard.json: upgraded swagger 2.0 -> OpenAPI 3.2.0",
+    "obie-opendata-personal-current-accounts-standard.json: upgraded swagger 2.0 -> OpenAPI 3.2.0",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "weatherbys-bank-atm-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "weatherbys-bank-bca-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "weatherbys-bank-branch-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "weatherbys-bank-pca-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
+}
