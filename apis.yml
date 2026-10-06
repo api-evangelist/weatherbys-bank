@@ -65,7 +65,7 @@ tags_raw:
 - Private Banking
 - Financial-Services
 created: '2026-07-23'
-modified: '2026-07-23'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 apis:
 - aid: weatherbys-bank:weatherbys-account-transaction-information-api
@@ -209,6 +209,8 @@ apis:
   - type: Documentation
     url: https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/bca/bca.html
 common:
+- url: https://www.weatherbys.bank/feed/
+  type: BlogRSS
 - type: CapabilityMap
   url: capabilities/weatherbys-bank-capability-edges.yml
   name: Weatherbys Bank Business Capability Map
