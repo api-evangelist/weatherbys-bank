@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/weatherbys-bank/integrations
+- https://n8n.io/integrations/weatherbys-bank/
+- https://composio.dev/toolkits/weatherbys-bank
+- https://monid.ai/tools/weatherbys-bank
+checked:
+- https://composio.dev/toolkits/weatherbys-bank
+- https://monid.ai/tools/weatherbys-bank
+- https://n8n.io/integrations/weatherbys-bank/
+- https://zapier.com/apps/weatherbys-bank/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
