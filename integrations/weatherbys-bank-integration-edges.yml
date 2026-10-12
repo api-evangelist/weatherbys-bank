@@ -1,5 +1,5 @@
 generated: '2026-10-12'
-method: none
+method: searched
 source:
 - https://zapier.com/apps/weatherbys-bank/integrations
 - https://n8n.io/integrations/weatherbys-bank/
@@ -9,8 +9,26 @@ checked:
 - https://composio.dev/toolkits/weatherbys-bank
 - https://monid.ai/tools/weatherbys-bank
 - https://n8n.io/integrations/weatherbys-bank/
+- https://www.openbanking.org.uk/regulated-providers/weatherbys-bank-limited/
 - https://zapier.com/apps/weatherbys-bank/integrations
 summary: null
 marketplace_apps: []
-edges: []
+edges:
+- partner_name: UK Open Banking
+  partner: null
+  type: contract
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.openbanking.org.uk/regulated-providers/weatherbys-bank-limited/
+  contract_reference:
+    register: UK Open Banking regulated providers (OBL directory)
+    spec_file: null
+    role: Account Providers
+    registered_name: Weatherbys Bank Limited
+    register_id: https://register.fca.org.uk/s/firm?id=001b000000MfJGhAAN
+    matched_domain: weatherbys.bank
+    api_families: null
+    detected_by: sweep-standard-registers.py
+    detected: '2026-10-12'
 templates: []
