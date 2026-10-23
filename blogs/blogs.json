@@ -5,7 +5,7 @@
       "source": "https://www.weatherbys.bank/feed/",
       "feed_url": "https://www.weatherbys.bank/feed/",
       "title": "",
-      "saved": 2,
+      "saved": 0,
       "method": "feed"
     },
     {
@@ -16,6 +16,13 @@
       "method": "discovered"
     },
     {
+      "source": "https://www.weatherbys.bank/insights/feed/",
+      "feed_url": "https://www.weatherbys.bank/insights/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
       "source": "https://www.linkedin.com/company/weatherbys-banking-group",
       "feed_url": "https://www.linkedin.com/company/weatherbys-banking-group",
       "title": "",
@@ -23,6 +30,6 @@
       "method": "none"
     }
   ],
-  "post_count": 2,
-  "fetched": "2026-10-10T13:15:00Z"
+  "post_count": 10,
+  "fetched": "2026-10-17T14:53:57Z"
 }
