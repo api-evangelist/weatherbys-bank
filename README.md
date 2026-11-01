@@ -1,4 +1,4 @@
-# Weatherbys Bank (weatherbys-bank)
+# Weatherbys Bank
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,174 +64,135 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Weatherbys Bank is a small, family-owned UK private bank, part of the Weatherbys Banking Group, trading since James Weatherby founded the family business in 1770 and incorporated as Weatherbys Bank Limited in 1994. It serves private, business, and racing customers through Weatherbys Private Bank and Weatherbys Racing Bank, and is authorised by the PRA and regulated by the FCA. As an FCA-authorised ASPSP it is a regulated participant in UK Open Banking (PSD2), publishing OBIE-conformant Open Data and Read/Write API surfaces. It is not one of the CMA9 mandated banks.
+Weatherbys Bank is a small, family-owned UK private bank, part of the Weatherbys Banking Group, trading since James Weatherby founded the family business in 1770 and incorporated as Weatherbys Bank Limited in 1994. It serves private, business, and racing customers through Weatherbys Private Bank and Weatherbys Racing Bank from offices in London, Wellingborough, and Edinburgh, and is authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority (FCA firm reference under Weatherbys Bank Limited). As an FCA-authorised ASPSP it is a regulated participant in UK Open Banking (PSD2), publishing OBIE-conformant surfaces - PUBLIC, unauthenticated Open Data reference APIs (ATM and branch locators, personal and business current account product data) and the FAPI-secured OBIE Read/Write APIs for Account and Transaction Information (AIS), Payment Initiation (PIS), and Confirmation of Funds (CBPII). It is not one of the CMA9 mandated banks. Its Open Banking gateway is hosted on Oracle Banking APIs (BaaS) at openbanking.weatherbysbank.com; there is no separately branded public developer portal.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/weatherbys-bank/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/weatherbys-bank/refs/heads/main/apis.yml)
+**Areas:** Financial Services · Banking · Open Banking · PSD2 · OBIE · United Kingdom · Payments · Account Information · Private Banking
 
-## Tags
+## Weatherbys Bank on APIs.io
 
-- Financial Services
-- Banking
-- Open Banking
-- PSD2
-- OBIE
-- United Kingdom
-- Payments
-- Account Information
-- Private Banking
+Everything profiled for Weatherbys Bank is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/weatherbys-bank/](https://apis.io/providers/weatherbys-bank/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (7)
 
-- **Created:** 2026-07-23
-- **Modified:** 2026-07-23
+- [Weatherbys Bank Account and Transaction Information API (AIS)](https://apis.io/apis/weatherbys-bank/weatherbys-account-transaction-information-api/) — OBIE Read/Write Account and Transaction Information API (AISP). FAPI-secured (OAuth2/OIDC, mutual-TLS, PSD2 strong customer authentication) — requires…
+- [Weatherbys Bank Payment Initiation API (PIS)](https://apis.io/apis/weatherbys-bank/weatherbys-payment-initiation-api/) — OBIE Read/Write Payment Initiation API (PISP). FAPI-secured (OAuth2/OIDC, mutual-TLS, PSD2 SCA) — requires OBIE/eIDAS certificates and dynamic client…
+- [Weatherbys Bank Confirmation of Funds API (CBPII)](https://apis.io/apis/weatherbys-bank/weatherbys-confirmation-of-funds-api/) — OBIE Read/Write Confirmation of Funds API (CBPII). FAPI-secured (OAuth2/OIDC, mutual-TLS, PSD2 SCA) — requires OBIE/eIDAS certificates and dynamic client…
+- [Weatherbys Bank ATM API](https://apis.io/apis/weatherbys-bank/weatherbys-bank-atm-api/) — Endpoint for getting ATM data
+- [Weatherbys Bank BCA API](https://apis.io/apis/weatherbys-bank/weatherbys-bank-bca-api/) — Endpoint for getting Business Current Account data
+- [Weatherbys Bank Branch API](https://apis.io/apis/weatherbys-bank/weatherbys-bank-branch-api/) — Endpoint for getting Branch data
+- [Weatherbys Bank PCA API](https://apis.io/apis/weatherbys-bank/weatherbys-bank-pca-api/) — Endpoint for getting Personal Current Account data
 
-## APIs
+### Published properties
 
-Weatherbys' Open Banking gateway is hosted on Oracle Banking APIs (BaaS) at `openbanking.weatherbysbank.com`. There is no separately branded public developer portal; the OBIE API surfaces below follow the UK Open Banking Standard. The bank's Open Banking host resets TLS connections presented without a client certificate, so no live Open Data endpoint returned a 200 at review time — the Open Data APIs are represented as documented/standard and marked unverified. The OpenAPI documents referenced are the shared OBIE Open Data standard specifications (Swagger 2.0), not bank-proprietary contracts.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Weatherbys Bank Open Data ATM Locator API
+#### MCP servers (1)
 
-PUBLIC, unauthenticated OBIE Open Data ATM Locator API — reference data for the bank's ATMs (postal address, geographic coordinates, services). Conforms to the OBIE Open Data API Standard v2.3.
+Model Context Protocol servers that expose the API to agents.
 
-- **Human URL:** [https://www.openbanking.org.uk/regulated-providers/weatherbys-bank-limited/](https://www.openbanking.org.uk/regulated-providers/weatherbys-bank-limited/)
-- **Base URL:** `https://openbanking.weatherbysbank.com/open-banking/v2.3`
+- [weatherbys-bank-open-data](https://apis.io/servers/weatherbys-bank/weatherbys-bank-open-data/)
 
-#### Tags
+#### Agentic access (1)
 
-- Open Data
-- ATM Locator
-- Public
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Properties
+- [Weatherbys Bank Agentic Access](https://apis.io/agentic-access/weatherbys-bank/weatherbys-bank-agentic-access/)
 
-- [OpenAPI](openapi/obie-opendata-atm-locator-standard.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Documentation](https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/atmlocator/atm-locator.html)
-- [API Reference](https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/)
+#### Collections (4)
 
-### Weatherbys Bank Open Data Branch Locator API
+Postman and Open Collection request collections.
 
-PUBLIC, unauthenticated OBIE Open Data Branch Locator API — reference data for the bank's branches. Conforms to the OBIE Open Data API Standard v2.3.
+- [Open Data API](https://apis.io/collections/weatherbys-bank/open-obie-opendata-atm-locator-standard/)
+- [Open Data API](https://apis.io/collections/weatherbys-bank/open-obie-opendata-branch-locator-standard/)
+- [Open Data API](https://apis.io/collections/weatherbys-bank/open-obie-opendata-business-current-accounts-standard/)
+- [Open Data API](https://apis.io/collections/weatherbys-bank/open-obie-opendata-personal-current-accounts-standard/)
 
-- **Human URL:** [https://www.openbanking.org.uk/regulated-providers/weatherbys-bank-limited/](https://www.openbanking.org.uk/regulated-providers/weatherbys-bank-limited/)
-- **Base URL:** `https://openbanking.weatherbysbank.com/open-banking/v2.3`
+#### Overlays (4)
 
-#### Tags
+OpenAPI overlays, including conversational phrasing for each operation.
 
-- Open Data
-- Branch Locator
-- Public
+- [Weatherbys Bank Atm Locator Overlay](https://apis.io/overlays/weatherbys-bank/weatherbys-bank-atm-locator-overlay/)
+- [Weatherbys Bank Branch Locator Overlay](https://apis.io/overlays/weatherbys-bank/weatherbys-bank-branch-locator-overlay/)
+- [Weatherbys Bank Business Current Accounts Overlay](https://apis.io/overlays/weatherbys-bank/weatherbys-bank-business-current-accounts-overlay/)
+- [Weatherbys Bank Personal Current Accounts Overlay](https://apis.io/overlays/weatherbys-bank/weatherbys-bank-personal-current-accounts-overlay/)
 
-#### Properties
+#### Security (2)
 
-- [OpenAPI](openapi/obie-opendata-branch-locator-standard.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Documentation](https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/branchlocator/branch-locator.html)
-- [API Reference](https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/)
+Authentication, trust centre, and vulnerability disclosure.
 
-### Weatherbys Bank Open Data Personal Current Accounts API
+- [Weatherbys Bank Authentication](https://apis.io/security/weatherbys-bank/weatherbys-bank-authentication/)
+- [Weatherbys Bank Domain Security](https://apis.io/security/weatherbys-bank/weatherbys-bank-domain-security/)
 
-PUBLIC, unauthenticated OBIE Open Data Personal Current Accounts (PCA) API — reference product data (features, fees, rates, eligibility). Conforms to the OBIE Open Data API Standard v2.4.
+#### OAuth scopes (1)
 
-- **Human URL:** [https://www.openbanking.org.uk/regulated-providers/weatherbys-bank-limited/](https://www.openbanking.org.uk/regulated-providers/weatherbys-bank-limited/)
-- **Base URL:** `https://openbanking.weatherbysbank.com/open-banking/v2.4`
+The permissions the API asks for.
 
-#### Tags
+- [Weatherbys Bank Scopes](https://apis.io/scopes/weatherbys-bank/weatherbys-bank-scopes/)
 
-- Open Data
-- Personal Current Accounts
-- Public
+## Where to find this API
 
-#### Properties
-
-- [OpenAPI](openapi/obie-opendata-personal-current-accounts-standard.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Documentation](https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/pca/pca.html)
-- [API Reference](https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/)
-
-### Weatherbys Bank Open Data Business Current Accounts API
-
-PUBLIC, unauthenticated OBIE Open Data Business Current Accounts (BCA) API — reference product data for business current accounts. Conforms to the OBIE Open Data API Standard v2.4.
-
-- **Human URL:** [https://www.openbanking.org.uk/regulated-providers/weatherbys-bank-limited/](https://www.openbanking.org.uk/regulated-providers/weatherbys-bank-limited/)
-- **Base URL:** `https://openbanking.weatherbysbank.com/open-banking/v2.4`
-
-#### Tags
-
-- Open Data
-- Business Current Accounts
-- Public
-
-#### Properties
-
-- [OpenAPI](openapi/obie-opendata-business-current-accounts-standard.json) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Documentation](https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/bca/bca.html)
-- [API Reference](https://openbankinguk.github.io/opendata-api-docs-pub/v2.4.0/)
-
-### Weatherbys Bank Account and Transaction Information API (AIS)
-
-OBIE Read/Write Account and Transaction Information API (AISP). FAPI-secured (OAuth2/OIDC, mutual-TLS, PSD2 strong customer authentication) — requires OBIE/eIDAS certificates and dynamic client registration.
-
-- **Human URL:** [https://www.openbanking.org.uk/regulated-providers/weatherbys-bank-limited/](https://www.openbanking.org.uk/regulated-providers/weatherbys-bank-limited/)
-- **Base URL:** `https://openbanking.weatherbysbank.com/open-banking/v3.1/aisp`
-
-#### Tags
-
-- Read/Write
-- Account Information
-- AIS
-
-#### Properties
-
-- [Documentation](https://openbankinguk.github.io/read-write-api-site3/)
-- [API Reference](https://github.com/OpenBankingUK/read-write-api-specs)
-
-### Weatherbys Bank Payment Initiation API (PIS)
-
-OBIE Read/Write Payment Initiation API (PISP). FAPI-secured (OAuth2/OIDC, mutual-TLS, PSD2 SCA) — requires OBIE/eIDAS certificates and dynamic client registration.
-
-- **Human URL:** [https://www.openbanking.org.uk/regulated-providers/weatherbys-bank-limited/](https://www.openbanking.org.uk/regulated-providers/weatherbys-bank-limited/)
-- **Base URL:** `https://openbanking.weatherbysbank.com/open-banking/v3.1/pisp`
-
-#### Tags
-
-- Read/Write
-- Payment Initiation
-- PIS
-
-#### Properties
-
-- [Documentation](https://openbankinguk.github.io/read-write-api-site3/)
-- [API Reference](https://github.com/OpenBankingUK/read-write-api-specs)
-
-### Weatherbys Bank Confirmation of Funds API (CBPII)
-
-OBIE Read/Write Confirmation of Funds API (CBPII). FAPI-secured (OAuth2/OIDC, mutual-TLS, PSD2 SCA) — requires OBIE/eIDAS certificates and dynamic client registration.
-
-- **Human URL:** [https://www.openbanking.org.uk/regulated-providers/weatherbys-bank-limited/](https://www.openbanking.org.uk/regulated-providers/weatherbys-bank-limited/)
-- **Base URL:** `https://openbanking.weatherbysbank.com/open-banking/v3.1/cbpii`
-
-#### Tags
-
-- Read/Write
-- Confirmation of Funds
-- CBPII
-
-#### Properties
-
-- [Documentation](https://openbankinguk.github.io/read-write-api-site3/)
-- [API Reference](https://github.com/OpenBankingUK/read-write-api-specs)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.weatherbys.bank/)
-- [Sign In](https://odbx.weatherbysbank.com/)
 - [Documentation](https://www.openbanking.org.uk/regulated-providers/weatherbys-bank-limited/)
-- [LinkedIn](https://www.linkedin.com/company/weatherbys-banking-group)
-- [Blog](https://www.weatherbys.bank/insights/)
-- [Status Page](https://www.weatherbys.bank/help-and-support/service-updates/)
 - [Support](https://www.weatherbys.bank/help-and-support/)
-- [Terms of Service](https://www.weatherbys.bank/terms-conditions/)
-- [Privacy Policy](https://www.weatherbys.bank/privacy-policy/)
+- [Blog](https://www.weatherbys.bank/insights/)
+- [Compliance](https://www.openbanking.org.uk/regulated-providers/weatherbys-bank-limited/)
+- [Terms of service](https://www.weatherbys.bank/terms-conditions/)
+- [Privacy policy](https://www.weatherbys.bank/privacy-policy/)
+- [Status](https://www.weatherbys.bank/help-and-support/service-updates/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 47.3** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 78.6 |
+| Contract quality | 36.4 |
+| Contract governance | 18.2 |
+| Operational transparency | 15.8 |
+| Developer ergonomics | 35.7 |
+| Access clarity | 78.6 |
+
+**Agent readiness 24.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | na |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | partial |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | — |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 41.7** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/weatherbys-bank/](https://apis.io/providers/weatherbys-bank/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Weatherbys Bank: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/weatherbys-bank/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
